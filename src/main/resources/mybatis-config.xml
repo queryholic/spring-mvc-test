@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<!-- default 옵션을 설정한다. -->
+	<settings>
+		<setting name="cacheEnabled" value="true" />
+		
+		<!-- lazy 로딩 수행여부 -->
+		<setting name="lazyLoadingEnabled" value="true" />
+		<setting name="aggressiveLazyLoading" value="true" />
+		
+		<!-- insert 구문 사용시 GENERATED_KEYS 기능을 사용해야 한다면 true 로 설정 기본값: false insert 
+			시 자동생성된 key 를 추가 sql 없이 얻을수 있음. 사용방법은 boardMapper.xml 의 insertArticle 문 참조 -->
+		<setting name="useGeneratedKeys" value="true" />
+		
+		<!-- mybatis 의 defaultExecutorType 를 설정한다 기본값 : SIMPLE -->
+		<!-- dbcp 사용시 preparedStatement cache 를 수행하므로 REUSE 를 사용할 필요는 없음. -->
+		<setting name="defaultExecutorType" value="SIMPLE" />
+		
+		<!--defaultQueryTiemout 을 설정한다. 초단위 -->
+		<setting name="defaultStatementTimeout" value="30" />
+		
+	</settings>
+</configuration>

@@ -10,7 +10,7 @@
 	<link href="/resources/css/join.css" rel="stylesheet">
 </head>
 <body>
-<form action="#">
+<form action="/join">
   <div>
     <label class="desc" id="title1" for="Field1">이름</label>
     <div>
