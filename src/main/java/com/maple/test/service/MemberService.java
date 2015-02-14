@@ -22,6 +22,6 @@ public interface MemberService {
 	/**
 	 * @param member
 	 */
-	void login(Member member);
+	boolean login(Member member);
 
 }

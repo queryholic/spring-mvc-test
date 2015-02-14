@@ -21,5 +21,8 @@
 		<!--defaultQueryTiemout 을 설정한다. 초단위 -->
 		<setting name="defaultStatementTimeout" value="30" />
 		
+		
+		
 	</settings>
+	
 </configuration>

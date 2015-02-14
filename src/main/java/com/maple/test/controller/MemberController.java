@@ -9,6 +9,7 @@ package com.maple.test.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.maple.test.model.Member;
@@ -40,8 +41,13 @@ public class MemberController {
 	}
 	
 	@RequestMapping("/login")
-	public String login(Member member) {
-		memberService.login(member);
-		return "loginForm";
+	public String login(Model model, Member member) {
+		
+		if (memberService.login(member)) {
+			return "main";
+		} else {
+			model.addAttribute("errorMsg", "로그인이 실패했습니다.");
+			return "loginForm";
+		}
 	}
 }

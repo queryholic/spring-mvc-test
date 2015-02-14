@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -10,6 +11,9 @@
 	<link href="/resources/css/join.css" rel="stylesheet">
 </head>
 <body>
+<c:if test="${not empty errorMsg}">
+	<h5 style="color: red;">${errorMsg}</h5>
+</c:if>
 <form action="/login">
   <div>
     <label class="desc" id="title1" for="Field1">이름</label>
